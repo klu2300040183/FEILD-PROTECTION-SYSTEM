@@ -1,0 +1,9 @@
+This project presents a real-time Smart Animal Detection and Alert System designed for field protection using computer vision and deep learning techniques. The system utilizes the YOLO (You Only Look Once) object detection model from the Ultralytics framework to identify animals such as monkeys, elephants, and birds through live video captured via a webcam.
+
+Upon detecting an animal with a confidence threshold above a specified limit, the system draws bounding boxes around the detected objects and displays their labels along with confidence scores. To minimize false detections, stricter confidence thresholds are applied for certain classes like birds.
+
+The system integrates an alert mechanism that includes both audio warnings and SMS notifications. When an animal is detected, a corresponding sound alert is played using multithreading to avoid interrupting the main detection process. Simultaneously, an SMS notification is sent to a predefined mobile number using the Twilio API, ensuring remote awareness of potential threats.
+
+Additionally, a cooldown mechanism is implemented to prevent repeated alerts for the same animal within a short duration, improving efficiency and reducing redundancy.
+
+Overall, this system provides an automated, real-time solution for monitoring agricultural fields or protected areas, helping to prevent crop damage and enhance safety through timely alerts and intelligent detection.
